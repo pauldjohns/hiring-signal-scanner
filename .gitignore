@@ -1,0 +1,16 @@
+# Target lists, scan findings, and team-page snapshots of real people. Keep local.
+data/*.csv
+results/*.csv
+results/*.json
+results/archive/*.json
+
+.env
+__pycache__/
+*.pyc
+.DS_Store
+
+# Belt and braces: these filenames hold target and scan data wherever they land.
+seed.csv
+feedback.csv
+latest.csv
+!examples/*.csv

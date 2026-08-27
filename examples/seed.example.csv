@@ -1,0 +1,4 @@
+company_name,url,country,employee_count,ats_type,ats_url,github_org,team_page_url
+Northwind Software,northwind.example,US,320,greenhouse,https://boards.greenhouse.io/northwind,northwind-software,https://northwind.example/about
+Bravo Labs,bravo.example,DE,140,lever,https://jobs.lever.co/bravo,,
+Charlie Co,charlie.example,UK,600,,,charlie-co,
