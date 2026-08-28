@@ -24,10 +24,16 @@ FRONTEND_KEYWORDS = {"react", "vue", "nextjs", "next.js", "frontend", "front-end
 FRONTEND_NAME_PATTERNS = ["-ui", "-web", "-frontend", "-app", "design-system", "storybook",
                            "components", "-dashboard", "-portal", "web-client"]
 
+# A read-only token lifts the GitHub API from 60 requests/hour to 5,000, which is the
+# difference between scanning three orgs and scanning forty. Unauthenticated still works.
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "").strip()
+
 HEADERS = {
     "User-Agent": "gtm-signal-scanner/1.0",
-    "Accept": "application/vnd.github.v3+json"
+    "Accept": "application/vnd.github.v3+json",
 }
+if GITHUB_TOKEN:
+    HEADERS["Authorization"] = f"Bearer {GITHUB_TOKEN}"
 
 rate_limit_remaining = 60
 rate_limit_hit = False

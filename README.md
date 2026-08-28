@@ -50,6 +50,7 @@ signal checks, the tiers, the output format, and the two other commands (“proc
 For the GitHub signal at volume:
 
 ```bash
+cp .env.example .env      # fill it in - it is gitignored
 GITHUB_TOKEN=ghp_… python3 scripts/signal3_github.py
 ```
 
